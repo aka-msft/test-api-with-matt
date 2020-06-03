@@ -7,6 +7,13 @@ namespace test_api_with_matt.Interfaces.Services
     {
         public int GetAdd(int x, int y);
 
-        public int PostAdd(MathBody body);
+        // TODO: Delete?
+        // public int PostAdd(MathBody body);
+
+        public int GetSubtract(int x, int y);
+
+        public int GetMultiply(int x, int y);
+
+        public double GetDivide(double x, double y);
     }
 }

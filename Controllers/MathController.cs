@@ -24,10 +24,29 @@ namespace test_api_with_matt.Controllers
             return Ok(this._mathService.GetAdd(x, y));
 		}
 
-        [HttpPost("add", Name = "PostAdd")]
-		public IActionResult PostAdd([FromBody] MathBody body)
+        // TODO: Delete?
+        // [HttpPost("add", Name = "PostAdd")]
+		// public IActionResult PostAdd([FromBody] MathBody body)
+		// {
+        //     return Ok(this._mathService.PostAdd(body));
+		// }
+
+		[HttpGet("subtract", Name = "GetSubtract")]
+		public IActionResult GetSubtract(int x, int y)
 		{
-            return Ok(this._mathService.PostAdd(body));
+            return Ok(this._mathService.GetSubtract(x, y));
+		}
+
+		[HttpGet("multiply", Name = "GetMultiply")]
+		public IActionResult GetMultiply(int x, int y)
+		{
+            return Ok(this._mathService.GetMultiply(x, y));
+		}
+
+		[HttpGet("divide", Name = "GetDivide")]
+		public IActionResult GetDivide(double x, double y)
+		{
+            return Ok(this._mathService.GetDivide(x, y));
 		}
 	}
 }
